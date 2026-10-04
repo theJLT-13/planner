@@ -1,1 +1,79 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="planner-icons/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="planner-icons/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="planner.webmanifest">
+<meta name="apple-mobile-web-app-title" content="My Week">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>A little more rhythm — weekly planner</title>
+<meta name="theme-color" content="#06294c">
+<style>
+:root{color-scheme:light;--ink:#06294c;--muted:#647387;--paper:#f3f5f8;--card:#fff;--line:#e5eaf0;--green:#06294c;--soft:#fff0e7;--orange:#ff590f}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:auto;padding:36px 30px 60px}header{position:relative;background:var(--ink);color:white;padding:32px;border-radius:26px;margin-bottom:24px;overflow:hidden}header:after{content:"";position:absolute;width:190px;height:190px;border:36px solid var(--orange);border-radius:50%;right:-65px;top:-65px;pointer-events:none}header .eyebrow{color:#ffad83}header p{color:#d3dfeb;max-width:520px;margin-bottom:0;position:relative;z-index:1}h1{font-size:clamp(34px,5vw,52px);letter-spacing:-.055em;line-height:1.05;margin:15px 0;font-weight:750;position:relative;z-index:1}.eyebrow{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:750;color:var(--muted)}h2{font-size:30px;letter-spacing:-.04em;margin:6px 0 20px}h3{font-size:17px;margin-top:0}p{color:var(--muted)}button,select,input{font:inherit}button,select{min-height:48px;border:1px solid var(--line);border-radius:13px;background:white;color:var(--ink);padding:10px 17px}button{cursor:pointer;font-weight:650}button:hover{background:var(--soft)}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:4px}nav{display:flex;gap:8px;margin-bottom:24px}nav button{flex:1}nav button[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}.nav-icon{display:block;font-size:21px;line-height:1.2;margin-bottom:3px}.settings{background:white;border:1px solid var(--line);border-radius:16px;margin-bottom:26px}.settings>summary{padding:16px 20px;cursor:pointer;font-weight:650}.settings>summary::marker{color:var(--orange)}.options{padding:0 20px 18px;display:flex;gap:18px;flex-wrap:wrap}.options label{display:flex;align-items:center;gap:10px;font-size:14px;min-height:44px}.options input{width:22px;height:22px;accent-color:var(--orange);flex-shrink:0}#picker{margin-bottom:24px}#picker label{display:block;margin-bottom:8px;color:var(--muted);font-size:13px}select{width:100%}.week{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.day{background:white;border:1px solid var(--line);border-radius:20px;padding:20px;display:flex;flex-direction:column}.day.today{border:2px solid var(--orange)}.day h3{font-size:24px;letter-spacing:-.04em;margin:10px 0}.tag{font-size:11px;font-weight:750;color:var(--muted)}.day ul{list-style:none;padding:0;margin:12px 0;flex:1}.day li{font-size:14px;margin-bottom:17px}.day li strong{display:block;color:var(--muted);font-size:10px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:4px}.day button{width:100%;font-size:13px;background:var(--ink);color:white;border:0}.detail{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);gap:24px}.timeline{background:white;border-radius:22px;padding:10px 24px;border:1px solid var(--line)}.row{display:grid;grid-template-columns:78px minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}.row:last-child{border:0}.time{font-size:12px;font-weight:650;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}.row details{border-left:3px solid var(--orange);padding-left:16px;min-width:0}.row summary{font-size:15px;font-weight:650;cursor:pointer;list-style:none;position:relative;padding-right:20px;min-height:26px}.row summary::-webkit-details-marker{display:none}.row summary:after{content:"+";position:absolute;right:0;color:var(--muted)}.row details[open] summary:after{content:"−"}.row p{font-size:14px;margin:10px 0 0}.aside{align-self:start;display:grid;gap:14px}.aside section{background:white;border:1px solid var(--line);border-radius:20px;padding:22px}.aside section:first-child{background:var(--soft);border:0}.aside h3{margin-bottom:8px}.aside p{font-size:14px;margin:0}.note{background:var(--ink);color:#e1eaf4;padding:22px;border-radius:20px;margin-top:24px;font-size:14px}.footer{font-size:12px;line-height:1.7;margin-top:20px;color:var(--muted)}.daily-caption{font-size:13px;margin:-12px 0 20px}.hero-line{width:35px;height:5px;background:var(--orange);border-radius:8px;margin-bottom:20px}[hidden]{display:none!important}@media(min-width:801px){.nav-icon{display:inline;margin-right:10px}nav{max-width:580px}}@media(max-width:800px){main{padding:20px 18px calc(115px + env(safe-area-inset-bottom))}header{padding:26px 24px;border-radius:24px;margin-bottom:18px}header p{font-size:14px;max-width:85%}header:after{width:140px;height:140px;border-width:28px;right:-65px;top:-45px}h1{font-size:39px;max-width:240px}nav{position:fixed;bottom:0;left:0;right:0;z-index:10;background:#fff;padding:10px 16px calc(10px + env(safe-area-inset-bottom));margin:0;gap:8px;border-top:1px solid var(--line);box-shadow:0 -8px 30px #06294c08}nav button{font-size:11px;border:0;padding:9px 5px;border-radius:14px;color:var(--muted)}nav button[aria-pressed=true]{color:var(--ink);background:var(--soft);box-shadow:inset 0 -3px var(--orange)}.detail{grid-template-columns:1fr;gap:20px}.week{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.day{padding:17px}.day h3{font-size:22px}.options{flex-direction:column;gap:4px}.settings{margin-bottom:24px}.timeline{padding:3px 18px}.row{grid-template-columns:65px minmax(0,1fr);gap:10px;padding:21px 0}.row details{padding-left:12px}.aside{grid-template-columns:1fr 1fr;gap:12px}.aside section{padding:18px}.aside p{font-size:13px}.aside h3{font-size:15px}}@media(max-width:370px){main{padding-left:12px;padding-right:12px}.week,.aside{grid-template-columns:1fr}.row{grid-template-columns:59px minmax(0,1fr)}h1{font-size:35px}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s ease,color .15s ease}}@media print{nav,.settings,#picker,.day button{display:none}main{padding:0}.week{grid-template-columns:repeat(3,1fr)}.day,.row{break-inside:avoid}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">MAKE ROOM FOR YOU</div><h1>Find your<br>daily rhythm.</h1><div class="hero-line"></div><p>A little movement. A little creativity.<br>A little more breathing room.</p></header>
+<nav aria-label="Planner views"><button data-view="today" aria-pressed="true"><span class="nav-icon" aria-hidden="true">☀</span>Today</button><button data-view="week" aria-pressed="false"><span class="nav-icon" aria-hidden="true">▦</span>My week</button><button data-view="choose" aria-pressed="false"><span class="nav-icon" aria-hidden="true">◷</span>Choose a day</button></nav>
+<details class="settings"><summary>Make this week yours</summary><div class="options"><label><input id="dinner" type="checkbox"> Wednesday dinner with friends</label><label><input id="wfh" type="checkbox"> Wednesday at home</label><label><input id="low" type="checkbox"> Low-energy week</label></div></details>
+<div id="picker" hidden><label for="daySelect">Day of the week</label><select id="daySelect"></select></div>
+<div id="content" aria-live="polite"></div>
+<div class="note" id="note"></div><p class="footer">Suggested times, not deadlines. Today follows Melbourne time. Preferences are saved in this browser when available.</p>
+</main>
+<script>
+const names=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const todayIndex=()=>names.indexOf(new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Melbourne',weekday:'long'}).format(new Date()));
+let view='today',chosen=todayIndex();
+const ids=['dinner','wfh','low'];
+try{const saved=JSON.parse(localStorage.getItem('life-planner-settings')||'{}');ids.forEach(id=>document.getElementById(id).checked=!!saved[id]);}catch{}
+const $=id=>document.getElementById(id);
+$('daySelect').innerHTML=names.map((n,i)=>`<option value="${i}">${n}</option>`).join('');$('daySelect').value=chosen;
+function plan(i){
+ const low=$('low').checked, home=i===4||(i===2&&$('wfh').checked), walking=i===0||(i===3&&!low), gym=i===1||(i===4&&!low), social=$('dinner').checked;
+ const place=i>4?'Open day':home?'Work from home':'Office';
+ const movement=walking?'Walk both ways · 50 min total':gym?'Gym after work':i===5?'Optional enjoyable walk':i===2&&home?'Optional short walk':i===6?'No required workout':'Tram commute';
+ const evenings=['Writing · 30–45 min','Easy dinner + downtime',social?'Dinner with friends':'Guitar or a free evening','Games or a free evening','Friends, games or relaxing','Open time + optional creative session','Meal prep + weekly reset'];
+ if(low){evenings[0]='Easy dinner + rest';evenings[3]='Free evening';}
+ const rows=[];const add=(t,title,desc)=>rows.push({t,title,desc});
+ if(i<5){
+ add('7:00','Wake up + breakfast','Use your prepped breakfast. Clothes and bag can be ready from the night before.');
+ if(!home)add(walking?'8:00':'8:05',walking?'Walk to work':'Catch the tram',walking?'About 2 km / 25 minutes. Pack light and aim to arrive by 8:30.':'Allow for waiting time and the 17-minute trip. Aim to arrive by 8:30.');
+ else add('8:30','Settle in at home','A little breathing room before the working day.');
+ add('9:00–5:00','Work','Take your usual breaks during the day.');
+ add('Lunch','Prepped lunch + optional reading','Read outside when the weather and your lunch suit it. No reading quota today.');
+ add('5:00','Close the working day','Write down unfinished work and tomorrow’s first task, then close work.');
+ if(walking)add('5:05','Walk home','Another 25 minutes on foot. This is today’s movement.');
+ else if(gym)add('After work',low?'One manageable gym visit':'Gym session','Keep the session manageable. Travel and session length can fit your energy and gym location.');
+ else if(!home)add('5:05','Tram home','Give yourself a little transition time before the evening.');
+ else add('After work','Step away from your desk','An optional short walk, or simply a change of scene.');
+ if(i===2)add('Evening',social?'Dinner with friends':'Easy dinner + guitar or downtime',social?'Fortnightly where possible. If plans fall through, your freezer meal is ready.':'Choose guitar if it sounds enjoyable; otherwise leave the evening open.');
+ else add('Evening',evenings[i],i===0&&!low?'Eat an easy dinner, then enjoy a short writing session.':'Use a prepped meal or leftovers so the evening stays easy.');
+ }else if(i===5){add('Morning','An unhurried start','Breakfast and an optional enjoyable walk.');add('Daytime','Open time','Friends, errands or simply a day without a packed schedule.');add('Optional','Writing or guitar','A longer creative session if you feel like it. Revisit an idea from your “ideas for later” note.');add('Evening','Keep it flexible','Friends, games, a simple dinner or relaxing.');}
+ else{add('Flexible','Check the fridge + groceries','Choose meals from your favourites and reuse ingredients across recipes.');add('60–90 min',low?'Simple meal prep':'Breakfast + lunch prep','Prepare a few breakfasts and one lunch recipe. Choose two dinners with overlapping ingredients; freeze spare portions.');add('10 min','Look at the week ahead','Confirm Wednesday plans, set aside a backup dinner, and check walking days and your gym bag.');add('Evening','Easy dinner + prepare for Monday','Set out clothes, pack a light bag and leave breakfast ready.');}
+ add('9:30','Park new ideas','Put the idea and one next step in your “ideas for later” note. Stop starting new projects tonight.');
+ add('10:00',low?'Wind down + optional 10-minute read':'Wind down + read 20–30 minutes','Get ready for bed first, then enjoy your book.');
+ add('10:30','Aim for bed','A starting target to support a steadier morning, not a pass-or-fail rule.');
+ return {place,movement,evening:evenings[i],rows,meal:i===2?'Keep a freezer portion or cupboard-based meal available, whether or not dinner plans are confirmed.':i===6?'Prep only a few portions at a time. Freeze extras and keep two easy backup meals available.':'Prepped breakfast and lunch; cook an extra dinner portion when useful for the next day’s lunch.'};
+}
+function render(){
+ document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
+ $('picker').hidden=view!=='choose';
+ $('note').textContent=$('low').checked?'A smaller week: one walking commute day, one manageable gym visit (or a gentle walk), simple meal prep and short reading sessions. Rest counts. Resume the next planned day.':'Your anchors: walk Monday + Thursday, gym Tuesday + Friday, prep on Sunday. Wednesday dinner is fortnightly where possible — switch it on for a dinner week.';
+ if(view==='week'){
+ $('content').innerHTML='<h2>Your weekly rhythm</h2><div class="week">'+names.map((n,i)=>{const p=plan(i);return `<article class="day ${i===todayIndex()?'today':''}"><span class="tag">${p.place}${i===todayIndex()?' · Today':''}</span><h3>${n}</h3><ul><li><strong>Movement</strong>${p.movement}</li><li><strong>Evening</strong>${p.evening}</li><li><strong>Wind down</strong>${$('low').checked?'Optional 10-minute read':'Read 20–30 min'}<br>Bed target · 10:30</li></ul><button data-day="${i}" aria-label="View ${n} breakdown">Daily breakdown →</button></article>`;}).join('')+'</div>';
+ document.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{chosen=Number(b.dataset.day);$('daySelect').value=chosen;view='choose';render();});
+ }else{
+ const i=view==='today'?todayIndex():chosen,p=plan(i),date=new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Melbourne',day:'numeric',month:'long'}).format(new Date());
+ $('content').innerHTML=`<div class="eyebrow">${view==='today'?'Today · '+date:'Your daily breakdown'} · ${p.place}</div><h2>${names[i]}, at your pace.</h2><p class="daily-caption">Your plan for the day. Tap any activity for the details.</p><div class="detail"><div class="timeline">${p.rows.map(r=>`<div class="row"><span class="time">${r.t}</span><details><summary>${r.title}</summary><p>${r.desc}</p></details></div>`).join('')}</div><aside class="aside"><section><h3>Movement</h3><p>${p.movement}. ${$('low').checked?'Adjust to your energy today.':'Build consistency first; running can come later.'}</p></section><section><h3>Food made easier</h3><p>${p.meal}</p></section><section><h3>Room for reading</h3><p>30–50 books a year is a direction, not a deadline. Bedtime is your main reading slot; lunch reading is a bonus.</p></section><section><h3>Permission to adjust</h3><p>Hobby slots are invitations. Swap them freely, leave room for friends and never catch up on missed sessions.</p></section></aside></div>`;
+ }
+}
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view;render();});
+$('daySelect').onchange=e=>{chosen=Number(e.target.value);render();};
+ids.forEach(id=>$(id).onchange=()=>{try{localStorage.setItem('life-planner-settings',JSON.stringify(Object.fromEntries(ids.map(k=>[k,$(k).checked]))));}catch{}render();});
+let lastDay=todayIndex();
+setInterval(()=>{const nextDay=todayIndex();if(nextDay!==lastDay){lastDay=nextDay;if(view==='today'||view==='week')render();}},60000);
+render();
+</script></body></html>
