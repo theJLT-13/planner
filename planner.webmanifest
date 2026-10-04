@@ -1,8 +1,8 @@
 {
-  "id": "./weekly-planner.html",
+  "id": "./",
   "name": "My Week — A little more rhythm",
   "short_name": "My Week",
-  "start_url": "./weekly-planner.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f3f5f8",
